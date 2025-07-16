@@ -1,0 +1,5 @@
+on_reject: continue
+range: 0 0
+accept_score: 0
+grader_flags: first_error
+input_validator_flags: maxn=100000 maxm=100000 maxs=20000000000 maxq=200000 maxw=1000000000

@@ -1,0 +1,11 @@
+uuid: 8d578f28-cb6f-4930-924f-654a9d3b4b53
+author: Dario Martinez Ramirez, Manuel Torres Cid
+source: European Girls' Olympiad in Informatics 2025
+rights_owner: European Girls' Olympiad in Informatics 2025
+license: cc by-sa
+type: scoring
+validation: custom
+grading:
+  show_test_data_groups: yes
+limits:
+  time_multiplier: 5

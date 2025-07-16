@@ -1,0 +1,10 @@
+uuid: d54298df-08e5-4641-9a75-18822f349a3d
+author: Yaw Chur Zhe, Tia Shi Wei
+source: European Girls' Olympiad in Informatics 2025
+rights_owner: European Girls' Olympiad in Informatics 2025
+license: cc by-sa
+type: scoring
+grading:
+  show_test_data_groups: yes
+limits:
+  time_multiplier: 2
