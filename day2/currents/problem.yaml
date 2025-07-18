@@ -1,0 +1,10 @@
+uuid: e39b2596-1b5a-4e08-9cb1-8ff8b63b3a2c
+author: Brian Lee Jun Siang
+source: European Girls' Olympiad in Informatics 2025
+rights_owner: European Girls' Olympiad in Informatics 2025
+license: cc by-sa
+type: scoring
+grading:
+  show_test_data_groups: yes
+limits:
+  time_multiplier: 2

@@ -1,0 +1,10 @@
+uuid: ae4110f7-eeb2-4a79-ba50-1c0098ac9e01
+author: Eliška Macáková
+source: European Girls' Olympiad in Informatics 2025
+rights_owner: European Girls' Olympiad in Informatics 2025
+license: cc by-sa
+type: scoring
+grading:
+  show_test_data_groups: yes
+limits:
+  time_multiplier: 5

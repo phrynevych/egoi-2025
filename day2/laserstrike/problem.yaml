@@ -1,0 +1,11 @@
+uuid: 4109dd96-ed5c-43a4-8b9e-07f00209f007
+author: Luca Versari
+source: European Girls' Olympiad in Informatics 2025
+rights_owner: European Girls' Olympiad in Informatics 2025
+license: cc by-sa
+type: scoring
+validation: custom interactive score
+grading:
+  show_test_data_groups: yes
+limits:
+  time_multiplier: 15

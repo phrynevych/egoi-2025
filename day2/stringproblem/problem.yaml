@@ -1,0 +1,11 @@
+uuid: 8ee7605a-48bb-8f7f-0862-f4d9c2f82981
+author: Yoav Linhart
+source: European Girls' Olympiad in Informatics 2025
+rights_owner: European Girls' Olympiad in Informatics 2025
+license: cc by-sa
+type: scoring
+validation: custom score
+grading:
+  show_test_data_groups: yes
+limits:
+  time_multiplier: 4

@@ -1,0 +1,102 @@
+\problemname{IMO}
+
+The International Mathematics Olympiad (IMO) is a maths competition for high school
+students that is held every year. The 2025 edition of the IMO takes place at the same time as the EGOI.
+As you are reading this, both contest days of the IMO have ended and the grading is probably almost done as well.
+Unlike programming competitions like the EGOI, the grading is done by hand,
+which is a long and arduous process.
+
+This year the IMO had $M$ problems (numbered from $0$ to $M-1$), and each problem is worth a maximum of $K$ points.  There were $N$ contestants 
+taking part in the contest. The $i$th contestant received a score of $a_{i,j}$ on problem $j$, 
+where $a_{i,j}$ is an integer between $0$ and $K$, inclusive. The ranking of the contestants is determined by the total score of each contestant,
+with ties broken by the contestants' indices. More formally, contestant $x$ ranks higher than contestant $y$ if:
+
+\begin{itemize}
+\item either the total score of contestant $x$ is bigger than the total score of contestant $y$,
+\item or their total scores are the same and $x < y$.
+\end{itemize}
+
+In order to release the final ranking, the organizers need to publish some of the values $a_{i,j}$.
+If a value is unpublished, it is only known that it is an integer between $0$ and $K$, inclusive.
+
+The organizers want to reveal as few of the values $a_{i,j}$ as possible.
+At the same time, they need to make sure that everyone knows the correct final ranking.
+In other words, they must reveal a set of values such that the only ranking consistent with it is the correct one.
+
+Find the smallest $S$ such that it is possible to reveal $S$ of the values $a_{i,j}$ in a way that uniquely determines the full ranking of the contestants.
+
+\section*{Input}
+The first line contains three integers $N$, $M$, and $K$: the number of contestants, the number of problems, and the maximum score of the tasks, respectively.
+
+Then follow $N$ lines, where the $i$th line contains $a_{i,j}$. That is, the first of these contains $a_{0,0}, a_{0,1}, \ldots, a_{0, M-1}$, the second contains $a_{1,0}, a_{1,1}, \ldots, a_{1, M-1}$, 
+and so on.
+
+\section*{Output}
+Print one integer $S$, the minimum number of scores that can be revealed so that the final 
+ranking is uniquely determined.
+
+\section*{Constraints and scoring}
+\begin{itemize}
+    \item $2 \leq N \leq 20\,000$.
+    \item $1 \leq M \leq 100$.
+    \item $1 \leq K \leq 100$.
+    \item $0 \leq a_{i,j} \leq K$ for every pair $i,j$ where $0 \leq i \leq N-1$ and $0\leq j \leq M-1$.
+\end{itemize}
+
+Your solution will be tested on a set of test groups, each worth a number of points. Each test group contains a set of test cases. To get the points for a test group, you need to solve all test cases in the test group.
+
+\begin{tabular}{|l|l|l|}
+    \hline
+    Group  &  Score  &  Limits \\
+    \hline
+     1 & 10 & $N = M = 2$ and $K = 1$ \\
+    \hline
+     2 & 13 & $N = 2$ \\
+    \hline
+     3 & 10 & $N \cdot M \leq 16$ \\
+    \hline
+     4 & 18 & $K = 1$ \\
+    \hline
+     5 & 21 & $N \leq 10\,000$ and $M,K \leq 10$ \\
+    \hline
+     6 & 28 & No additional constraints \\
+    \hline
+\end{tabular}
+
+\section*{Examples}
+In the first example, the $20$ scores can be revealed in the following way:
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    $7$ & $7$ & $0$ & $\bullet$ & $7$ & $\bullet$ \\
+    \hline
+    $7$ & $3$ & $0$ & $7$ & $2$ & $1$ \\
+    \hline
+    $\bullet$ & $0$ & $0$ & $\bullet$ & $0$ & $0$ \\
+    \hline
+    $7$ & $7$ & $7$ & $7$ & $7$ & $1$ \\
+    \hline
+    \end{tabular}
+\end{center}
+
+Here, the third contestant is known to have a total score between $0$ and $14$, which
+is definitely lower than any other score. It can be shown that it is impossible
+to reveal fewer than $20$ scores. For example, if we were to hide one of the 
+zeroes of the third contestant, then this contestant could have a total score 
+of up to $21$. This is a problem because the second contestant has a total score
+of $20$, but should be guaranteed to rank higher than the third contestant.
+
+The first sample satisfies the constraints of test groups $5$ and $6$.
+
+In the second example, we can either reveal only the first contestant's only score, or reveal only the second contestant's only score (but not both). If we reveal only the first contestant's score, then we know that the first contestant has a total score of $1$. This means that even if the second contestant also has a score of $1$, the first contestant will rank higher because their index 
+is lower. Similarly, if we only reveal the score of the second contestant, we know 
+that they have a score of zero, which means that the first contestant will rank higher 
+regardless of their score. 
+
+The second sample satisfies the constraints of test groups $2$, $3$, $4$, $5$, and $6$.
+
+The third sample satisfies the constraints of test groups $2$, $3$, $5$, and $6$.
+
+The fourth sample satisfies the constraints of all test groups.
+
